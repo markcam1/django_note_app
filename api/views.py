@@ -61,7 +61,8 @@ def getNote(request, pk):
 def createNote(request):
     data = request.data
     note = Note.objects.create(
-        body = data['body']
+        body = data['body'],
+        amount = data['amount']
     )
     
     serializer = NoteSerializer(note, many=False)

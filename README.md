@@ -1,5 +1,6 @@
 #Django install
 
+[Writing First Django app part1](https://docs.djangoproject.com/en/5.0/intro/tutorial01/)
 
 # New django project (from project_name folder)
 ~$  django-admin startproject config .
@@ -77,7 +78,7 @@ python manage.py collectstatic
 
 ```
 
-# Take all data from app blog and export in json
+## Take all data from app blog and export in json
 
 ```python
 
@@ -85,7 +86,7 @@ python manage.py dumpdata blog >myapp.json
 
 ```
 
-# Take all data in json file and import in app data table
+## Take all data in json file and import in app data table
 
 ```python
 
@@ -94,6 +95,33 @@ python manage.py loaddata myapp.json
 
 ```
 
+---
+## 
+Creating an admin user¶
+First we’ll need to create a user who can login to the admin site. Run the following command:
+
+/ 
+$ python manage.py createsuperuser
+Enter your desired username and press enter.
+
+Username: admin
+You will then be prompted for your desired email address:
+
+Email address: admin@example.com
+The final step is to enter your password. You will be asked to enter your password twice, the second time as a confirmation of the first.
+
+Password: **********
+Password (again): *********
+Superuser created successfully.
+Start the development server¶
+The Django admin site is activated by default. Let’s start the development server and explore it.
+
+If the server is not running start it like so:
+
+/ 
+$ python manage.py runserver
+
+---
 
 
 
